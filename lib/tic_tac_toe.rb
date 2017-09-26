@@ -112,10 +112,10 @@ def winner
    return nil
  end
    if @board[won?[0]] == "X"
-     return "X"
+      "X"
    end
   if @board[won?[0]] == "O"
-    return "O"
+     "O"
 end
 end
 
