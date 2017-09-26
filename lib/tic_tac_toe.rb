@@ -122,9 +122,9 @@ end
 def play
     until over?
       turn
-      won?
     end
     if won?
+      win_combination = won?
       puts "Congratulations #{winner(board)}!"
     else draw?
       puts "Cat's Game!"
