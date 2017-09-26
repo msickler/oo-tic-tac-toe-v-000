@@ -77,22 +77,22 @@ def current_player
 end
 
 def won?
-  WIN_COMBINATIONS.each do |win_combination|
-    win = win_combination.all? do |index|
-      index == "X"
-    end
-    if win
-      return win_combination
-    end
-    win = win_combination.all? do |index|
-      index == "O"
-    end
-    if win
-      return win_combination
-    end
-  end
-  return false
-end
+   WIN_COMBINATIONS.each do |win_combination|
+     win = win_combination.all? do |index|
+       @board[index] == "X"
+     end
+     if win
+       return win_combination
+     end
+     win = win_combination.all? do |index|
+       @board[index] == "O"
+     end
+     if win
+       return win_combination
+     end
+   end
+   return false
+ end
 
 def full?
   @board.none?{|token| token == " "}
