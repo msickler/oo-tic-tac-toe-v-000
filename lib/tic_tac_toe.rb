@@ -107,25 +107,25 @@ def over?
 end
 
 
-def winner(board)
- if !(won?(board))
+def winner
+ if !(won?)
    return nil
  end
-   if board[won?(board)[0]] == "X"
+   if @board[won?[0]] == "X"
      return "X"
    end
-  if board[won?(board)[0]] == "O"
+  if @board[won?[0]] == "O"
     return "O"
 end
 end
 
-def play(board)
-   until over?(board)
-     turn(board)
+def play
+   until over?
+     turn
    end
-   if won?(board)
+   if won?
      puts "Congratulations #{winner(board)}!"
-   else draw?(board)
+   else draw?
      puts "Cat's Game!"
    end
  end
