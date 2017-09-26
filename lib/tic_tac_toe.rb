@@ -110,13 +110,11 @@ end
 def winner
  if !(won?)
    return nil
- else
+ elsif
   @board[won?[0]] == "X"
       "X"
-   elsif
+   else
   @board[won?[0]] == "O"
      "O"
 end
 end
-
-
