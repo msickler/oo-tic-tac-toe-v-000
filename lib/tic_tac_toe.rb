@@ -125,7 +125,7 @@ def play
     end
     if won?
       win_combination = won?
-      puts "Congratulations #{winner(board)}!"
+      puts "Congratulations #{winner}!"
     else draw?
       puts "Cat's Game!"
     end
