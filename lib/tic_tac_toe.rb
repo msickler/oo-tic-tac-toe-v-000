@@ -120,8 +120,9 @@ end
 end
 
 def play
-    until over? || won?
+    until over? 
       turn
+      won?
     end
     if won?
       puts "Congratulations #{winner(board)}!"
